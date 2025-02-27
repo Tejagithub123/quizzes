@@ -1,7 +1,7 @@
 import React from "react";
 import api from "../api";
 import ProductForm from "./ProductForm";
-
+import imgs from "./pngs.png";
 function ProductList({ products, onProductUpdated, onProductDeleted }) {
   const handleDelete = async (id) => {
     try {
@@ -33,11 +33,7 @@ function ProductList({ products, onProductUpdated, onProductDeleted }) {
             className="bg-white p-4 rounded-lg shadow-md flex flex-col md:flex-row justify-between items-center"
           >
             <div className="flex items-center space-x-4">
-              <img
-                src="https://via.placeholder.com/80"
-                alt="Product"
-                className="w-20 h-20 rounded"
-              />
+              <img src={imgs} alt="Product" className="w-20 h-20 rounded" />
               <div>
                 <h4 className="text-xl font-bold">{product.name}</h4>
                 <p className="text-gray-600">

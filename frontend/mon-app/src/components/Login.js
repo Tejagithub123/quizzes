@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api";
-
+import logo from "./logo.png";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,11 +27,7 @@ function Login() {
     <div className="min-h-screen flex items-center justify-center bg-blue-50">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <div className="flex justify-center mb-4">
-          <img
-            src="https://via.placeholder.com/80"
-            alt="Logo"
-            className="h-20 w-20"
-          />
+          <img src={logo} alt="Logo" className="h-20 w-20" />
         </div>
         <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
